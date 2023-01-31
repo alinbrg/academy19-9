@@ -1,0 +1,132 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+a {
+	color: black;
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+}
+.box {
+	width: 100%;
+	/* height: 200px; */
+	border: 1px solid;
+	font-size: 30px;
+	background-color: red;
+	/* display: flex;
+	align-items: center;
+	justify-content: center; */
+}
+
+.parent {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	/* grid-gap: 30px; */
+	/* grid-column-gap: 30px;
+	grid-row-gap: 30px; */
+
+	grid-auto-rows: minmax(100px, auto);
+	/* grid-template-rows: 150px 200px; */
+
+	/* grid-template-areas:
+		"header header header"
+		"sidebar about about"
+		"sidebar contact social"
+		"footer footer footer"; */
+}
+
+.box-1 {
+	/* grid-area: header; */
+
+	/* grid-column-start: 1;
+	grid-column-end: -1; */
+
+	grid-column: span 3;
+}
+
+.box-2 {
+	/* grid-area: sidebar; */
+
+	/* grid-row-start: 2;
+	grid-row-end: 4; */
+
+	grid-row: 2 / span 2;
+}
+
+.box-3 {
+	/* grid-area: about; */
+
+	/* grid-column-start: 2;
+	grid-column-end: 4; */
+
+	grid-column: 2 / span 2;
+}
+
+.box-4 {
+	/* grid-area: contact; */
+
+	/* grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 3;
+	grid-row-end: 4; */
+
+	grid-column: 2 / span 1;
+	grid-row: 3 / span 1;
+}
+
+.box-6 {
+	/* grid-area: social; */
+
+	/* grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 3;
+	grid-row-end: 4; */
+
+	grid-column: 3 / span 1;
+	grid-row: 3 / span 1;
+}
+
+.box-5 {
+	/* grid-area: footer; */
+
+	/* grid-column-start: 1;
+	grid-column-end: 4; */
+
+	grid-column: 1 / span 3;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 10px 0;
+}
+header ul {
+	display: flex;
+}
+header li {
+	margin: 0 10px;
+}
+.container {
+	max-width: 1400px;
+	width: 90%;
+	margin: auto;
+	/* background-color: darkblue; */
+}
+
+.footer {
+	padding: 30px 0;
+	/* display: flex;
+	justify-content: space-between; */
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.footer-list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
